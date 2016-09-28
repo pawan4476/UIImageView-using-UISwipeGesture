@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="t67-MU-sIJ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EgC-0K-HiQ">
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="dcd-Ig-fGL"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="v2e-1e-qgL" appends="YES" id="8gD-g6-r1c"/>
+                                    <outletCollection property="gestureRecognizers" destination="nXN-qj-5jt" appends="YES" id="PPF-Kp-Ro3"/>
+                                </connections>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="faM-PV-ooz">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="PqK-p2-OAh"/>
+                                    <constraint firstAttribute="width" constant="375" id="R4s-cU-0Hk"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="faM-PV-ooz" secondAttribute="trailing" id="XQ5-L2-Ryy"/>
+                            <constraint firstItem="EgC-0K-HiQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i52-ZA-rj4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="faM-PV-ooz" secondAttribute="bottom" id="oVy-kE-hKW"/>
+                            <constraint firstAttribute="trailing" secondItem="EgC-0K-HiQ" secondAttribute="trailing" id="tCM-np-qCj"/>
+                            <constraint firstItem="EgC-0K-HiQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="wY8-Bc-b1R"/>
+                            <constraint firstItem="faM-PV-ooz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zuZ-NH-Oa7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FnQ-5R-VGd"/>
+                    <connections>
+                        <outlet property="img" destination="EgC-0K-HiQ" id="BEg-RH-LZY"/>
+                        <outlet property="txtView" destination="faM-PV-ooz" id="f0y-r8-jGp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="v2e-1e-qgL">
+                    <connections>
+                        <action selector="rightSwipe:" destination="BYZ-38-t0r" id="wBr-KF-AGb"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="nXN-qj-5jt">
+                    <connections>
+                        <action selector="leftSwipe:" destination="BYZ-38-t0r" id="A13-zx-jHf"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="901.60000000000002" y="-543.77811094452773"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wsG-Kp-Z3j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t67-MU-sIJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LgM-Mu-BCe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LZX-6o-19s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GKb-6y-jdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="-543.77811094452773"/>
+        </scene>
+    </scenes>
+</document>
